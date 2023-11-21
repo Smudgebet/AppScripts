@@ -1,0 +1,6 @@
+function getActiveSpreadsheet(){
+  const ss = SpreadsheetApp.getActiveSpreadsheet()
+  console.log(ss.getUrl())
+  console.log(ss.getName())
+  console.log(ss.getId())
+}
