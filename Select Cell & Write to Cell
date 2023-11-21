@@ -1,0 +1,5 @@
+function test() {
+  var spreadsheet = SpreadsheetApp.getActive();
+  spreadsheet.getRange('B1').activate();
+  spreadsheet.getCurrentCell().setValue("This Text Goes In The Cell")
+};
