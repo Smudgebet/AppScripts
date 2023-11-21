@@ -1,0 +1,15 @@
+function makeNewOne(){
+  const id = '1LFFlyZtsxq9aayigJwk8Gc6VaiJrvuzPk7tfC90sbK8'; //Declaring "ID" as the Sheet ID
+  const ss = SpreadsheetApp.openById(id);  // Declaring "ss" as a function to open the sheet using the ID
+  const sheets = ss.getSheets(); 
+  Logger.log(sheets);
+
+  const newName = 'Sheet New';  // declare newName as "Sheet Name"
+  let sheet = ss.getSheetByName(newName);
+  if(sheet == null){
+    sheet = ss.insertSheet(); // Insert New Tab into Sheet
+    sheet.setName(newName); // Rename Tab using variable newName
+  }
+  Logger.log(sheet.getIndex());
+ 
+}
