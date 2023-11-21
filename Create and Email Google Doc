@@ -1,0 +1,13 @@
+function myFunction() {
+  //Create Document
+  var doc = DocumentApp.create('Document Name'); // Creates New Doc
+  var body = doc.getBody()
+  body.appendParagraph("Text")  // Adds Text to the body of the Doc
+
+  // Email to user
+  var email = Session.getActiveUser().getEmail();
+  var subject = doc.getName();
+  var bodyEmail = 'This is the new doc = ' + doc.getUrl();
+  GmailApp.sendEmail(email,subject,bodyEmail);
+  
+}
