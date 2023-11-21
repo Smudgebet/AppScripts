@@ -1,0 +1,10 @@
+function makeNewOne() {
+  const id = "1LFFlyZtsxq9aayigJwk8Gc6VaiJrvuzPk7tfC90sbK8";
+  const ss = SpreadsheetApp.openById(id);
+  const newSheetName = "Sheet New 1" + 1;
+  const sheets = ss.getSheets();
+  let sheet = ss.getSheetByName(newSheetName)
+  if(sheet == null){sheet = ss.insertSheet(newSheetName)}
+ 
+  ;
+}
