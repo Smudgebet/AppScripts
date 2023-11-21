@@ -1,0 +1,7 @@
+function myFunction() {
+  var doc = DocumentApp.create('Document Name') // Creates New Doc
+    var body = doc.getBody()
+  body.appendParagraph("Text")  // Adds Text to the body of the Doc
+
+  
+}
