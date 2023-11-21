@@ -1,0 +1,6 @@
+function sendMap() {
+  var sheet = SpreadsheetApp.getActiveSheet();
+  var address = sheet.getRange('A1').getValue();
+  var map = Maps.newStaticMap().addMarker(address);
+  GmailApp.sendEmail('Basingstoke@sanmina.com', 'Email Subject', 'Email text.', {attachments:[map]});
+}
