@@ -1,0 +1,5 @@
+function testSheet1() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const sheet = ss.getActiveSheet();
+  console.log(sheet.getName)
+}
